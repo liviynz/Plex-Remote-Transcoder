@@ -4,48 +4,30 @@
 
 A distributed transcoding backend for Plex.
 
-Please help by reporting bugs, pull-requests or feature requests!
+Please help by reporting bugs or with pull-requests.
 
-For those interested in testing this out quickly, there is a step by
+For those interested in testing this out quickly, I've put together a step by
 step guide for getting this working on two Ubuntu machines.  You can find the
 guide [here](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Ubuntu-Install).
 
 Addtionally, for proposed features and some current limitations, check out
 [this page](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Improvements-&-Additional-Features).
 
-## Supported Versions
-
-**NOTE**  Upgrading `Plex Media Server` often breaks things and it takes us some time to figure out what needs to be fixed.  It is suggested that you avoid upgrading your Plex server before checking here first.
-
-**The latest confirmed working version** of `Plex Media Server` is:
-
-     1.3.4.3285
-    
-If you try a newer version and encounter an issue, please report it.
-
-### Currently Testing Version
-
-The most recently tested version is  `Plex Media Server` version `1.7.5.4035-313f93718`.  I'm not marking this as supported yet until more people have confirmed that it is working correctly.
-
-**IMPORTANT**
-With this version you will need to ensure that the slaves are allowed to connect to the master without auth in order to everything to work correctly.  To do this, go to the server settings via your browser, navigate to the 'Network' tab (make sure "Show Advanced" is on). Scroll down to "List of IP addresses and networks that are allowed without auth". In that box, put in your slave addresses or network.
-
-
-
-### Upgrading Plex Media Server
-Users have reported that the following steps need to be taken in order to get `PRT` working with the newer versions of `Plex Media Server`:
-
-1. Remove the codec directory: `rm -rf '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Codecs/5a2d9a2-1127-linux-ubuntu-x86_64'`)
-2. Remove the previous encoder: `rm -rf /usr/lib/plexmediaserver/plex_transcoder`
-3. Install Plex: `dpkg -i plexmediaserver_1.2.3.2914-1ff0f18_amd64.deb`
+!!! Warning
+	Upgrading `Plex Media Server` often breaks things and it takes us some time to figure out what needs to be fixed.  It is suggested that you avoid upgrading your Plex server before checking here first.
 
 ## Releases
 
-For versions of Plex Media Server below version 1.1.0. use release [0.3.5](https://github.com/wnielson/Plex-Remote-Transcoder/releases/tag/0.3.5).
+The table below shows what version of `Plex Remote Transcoder` to use based off of which version of `Plex Media Server` you are currently running.
 
-For versions of Plex Media Server below version 1.0, use release [0.2.2](https://github.com/wnielson/Plex-Remote-Transcoder/releases/tag/0.2.2).
+| Plex Media Server Version | Plex Remote Transcoder Version |
+|--------------|---------------------------|
+| `1.1.0.2611` | `master` ([zip](https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip)) | 
+| Below `1.1.0`| `0.3.5`  ([zip](https://github.com/wnielson/Plex-Remote-Transcoder/archive/0.3.5.zip)) |
+| Below `1.0`  | `0.2.2`  ([zip](https://github.com/wnielson/Plex-Remote-Transcoder/archive/0.2.2.zip)) |
 
-For the newest version of Plex Media Server, use the main branch or the [newest release](https://github.com/wnielson/Plex-Remote-Transcoder/releases).
+!!! Note
+	If you are using a version of `Plex Media Server` not mentioned in the above table, you may encounter issues.  If you do have issues, [please report them](https://github.com/wnielson/Plex-Remote-Transcoder/issues)!
 
 ## Contributing
 
