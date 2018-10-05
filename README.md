@@ -13,19 +13,24 @@ guide [here](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Ubuntu-Inst
 Addtionally, for proposed features and some current limitations, check out
 [this page](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Improvements-&-Additional-Features).
 
+
 ## Supported Versions
 
-**NOTE**  Upgrading `Plex Media Server` often breaks things and it takes us some time to figure out what needs to be fixed.  It is suggested that you avoid upgrading your Plex server before checking here first.
+**The current OS recommendation** for `Master/Slave` is
+
+     Ubuntu 18.04
+
+**Known issue with 18.04 slaves** When moving to 18.04 the ssh connections from the master to the slaves stop working. The fix is to edit the file `/etc/systemd/resolved.conf` and add the line `DNSStubListener=no` then restart the service using `sudo systemctl restart systemd-resolved` and the slaves should start working again.
+
+**NOTE** While we recommend a particular platform the software is known to work with most, of not all other distributions & versions. We do all our testing on the platform we recommend but do attempt to still provide support & guidance to users regardless of their platform choice.
 
 **The latest confirmed working version** of `Plex Media Server` is:
 
-     1.3.4.3285
+     1.13.8.5395
     
 If you try a newer version and encounter an issue, please report it.
 
-### Currently Testing Version
-
-The most recently tested version is  `Plex Media Server` version `1.7.5.4035-313f93718`.  I'm not marking this as supported yet until more people have confirmed that it is working correctly.
+**NOTE**  Upgrading `Plex Media Server` often breaks things and it takes us some time to figure out what needs to be fixed.  It is suggested that you avoid upgrading your Plex server before checking here first.
 
 **IMPORTANT**
 With this version you will need to ensure that the slaves are allowed to connect to the master without auth in order to everything to work correctly.  To do this, go to the server settings via your browser, navigate to the 'Network' tab (make sure "Show Advanced" is on). Scroll down to "List of IP addresses and networks that are allowed without auth". In that box, put in your slave addresses or network.
