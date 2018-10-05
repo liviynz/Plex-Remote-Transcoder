@@ -7,8 +7,7 @@ A distributed transcoding backend for Plex.
 Please help by reporting bugs, pull-requests or feature requests!
 
 For those interested in testing this out quickly, there is a step by
-step guide for getting this working on two Ubuntu machines.  You can find the
-guide [here](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Ubuntu-Install).
+step guide for getting this working on two Ubuntu machines.  You can find the old Ubuntu 16.04 guide [here](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Ubuntu-Install). A revised one will be done for 18.04 soon but the old one is reasonably close in steps.
 
 Addtionally, for proposed features and some current limitations, check out
 [this page](https://github.com/wnielson/Plex-Remote-Transcoder/wiki/Improvements-&-Additional-Features).
@@ -145,7 +144,7 @@ TODO: Document this.
 ## Contributors
 
 * Weston Nielson (Owner) - wnielson@github
-* Andy Livingstone - liviynz@github
+* Andy Liviy - liviynz@github
 
 
 ## Donations
